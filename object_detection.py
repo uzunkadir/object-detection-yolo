@@ -29,6 +29,9 @@ colors = np.tile(colors,(20,1))
 
 model = cv2.dnn.readNetFromDarknet("model/yolov3.cfg", "model/yolov3.weights")
 
+# yolov3.weights link: https://pjreddie.com/media/files/yolov3.weights
+
+
 layers = model.getLayerNames()
 output_layer = [ layers[layer[0]-1] for layer in model.getUnconnectedOutLayers() ] 
 
